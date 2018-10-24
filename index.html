@@ -5,21 +5,14 @@ blog: passive
 contact: passive
 description: Chen Baozi is a Programmer.
 ---
-<!-- <div class="jumbotron"> -->
-<div class="row marketing">
-    <div itemscope itemtype="http://data-vocabulary.org/Person" class="col-sm-8">
-        <p class="lead">Hi, I'm Chen Baozi. This is my personal blog.</p>
-    </div>
-</div>
-<hr>
 <div class="blog">
     {% for post in site.posts limit:5 %}
     <div class="blog single">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <p class="author">
+        <h1 class=title><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p class="data">
             <span class="date">{{ post.date }}</span>
         </p>
-        <div class="content">
+        <div class="body">
             {{ post.content }}
         </div>
     </div>
