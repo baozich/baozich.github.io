@@ -10,5 +10,16 @@ description: Chen Baozi is a Programmer.
     <div itemscope itemtype="http://data-vocabulary.org/Person" class="col-sm-8">
         <p class="lead">Hi, I'm Chen Baozi. This is my personal blog.</p>
     </div>
+    {% for post in site.posts limit:5 %}
+    <div>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p class="author">
+            <span class="date">{{ post.date }}</span>
+        </p>
+        <div class="content">
+            {{ post.content }}
+        </div>
+    </div>
+    {% endfor %}
 </div>
 <!-- </div -->
